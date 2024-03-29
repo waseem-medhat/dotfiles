@@ -1,0 +1,94 @@
+{
+  "editorCmd": "/home/waseem/Downloads/software/nvim.appimage",
+  "customBehaviour": true,
+  "aliases": [
+    {
+      "alias": "gp",
+      "path": "/home/waseem/proj/gopen"
+    },
+    {
+      "alias": "wez",
+      "path": "/home/waseem/.config/wezterm"
+    },
+    {
+      "alias": "fp",
+      "path": "/home/waseem/proj/funutils"
+    },
+    {
+      "alias": "nv",
+      "path": "/home/waseem/.config/nvim"
+    },
+    {
+      "alias": "chrp",
+      "path": "/home/waseem/proj/chirpy"
+    },
+    {
+      "alias": "sch",
+      "path": "/home/waseem/proj/goschulte"
+    },
+    {
+      "alias": "cc",
+      "path": "/home/waseem/proj/cc4e"
+    },
+    {
+      "alias": "leet",
+      "path": "/home/waseem/proj/leetcode"
+    },
+    {
+      "alias": "aoc",
+      "path": "/home/waseem/proj/aoc2023"
+    },
+    {
+      "alias": "blog",
+      "path": "/home/waseem/proj/wipdev-site-v2"
+    },
+    {
+      "alias": "tdt",
+      "path": "/home/waseem/proj/tdt"
+    },
+    {
+      "alias": "poke",
+      "path": "/home/waseem/proj/go-pokedex"
+    },
+    {
+      "alias": "pg",
+      "path": "/home/waseem/proj/ed/playground"
+    },
+    {
+      "alias": "banc",
+      "path": "/home/waseem/Downloads/worldbanc"
+    },
+    {
+      "alias": "agg",
+      "path": "/home/waseem/proj/blogagg"
+    },
+    {
+      "alias": "readme",
+      "path": "/home/waseem/proj/project-readme-template"
+    },
+    {
+      "alias": "pmdb",
+      "path": "/home/waseem/proj/pmdb"
+    },
+    {
+      "alias": "lurc",
+      "path": "/home/waseem/proj/lurc"
+    },
+    {
+      "alias": "this",
+      "path": "/home/waseem/proj/this-or-that-lang"
+    },
+    {
+      "alias": "ssg",
+      "path": "/home/waseem/proj/pyssg"
+    },
+    {
+      "alias": "algo",
+      "path": "/home/waseem/proj/prime-algo"
+    },
+    {
+      "alias": "dot",
+      "path": "/home/waseem/.dotfiles"
+    }
+  ]
+}
