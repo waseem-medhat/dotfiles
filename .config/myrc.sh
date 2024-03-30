@@ -6,12 +6,14 @@
 
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:~/go/bin
+export PATH=$PATH:~/.pyenv/bin/
+export PYENV_ROOT='~/.pyenv/'
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u:\[\033[01;34m\]\w\[\033[00m\]\$ '
 alias nv='~/Downloads/software/nvim.appimage'
 alias g='gopen'
 alias ll='lsd -la'
 alias l='lsd'
-alias tree='lsd --tree --group-dirs=first'
+alias tree='lsd -a --tree --group-dirs=first -I "node_modules" -I ".git"'
 alias m='make'
 
 if [ -z "$TMUX" ]; then
