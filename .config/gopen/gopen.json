@@ -89,6 +89,10 @@
     {
       "alias": "dot",
       "path": "/home/waseem/.dotfiles"
+    },
+    {
+      "alias": "bank",
+      "path": "/home/waseem/proj/microbank"
     }
   ]
 }

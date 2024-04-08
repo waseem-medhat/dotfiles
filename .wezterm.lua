@@ -6,12 +6,12 @@ if wezterm.config_builder then
 end
 
 -- config.window_decorations = "NONE"
-config.color_scheme = 'Gruvbox dark, hard (base16)'
+config.color_scheme = 'catppuccin-mocha'
 config.enable_tab_bar = false
-config.font = wezterm.font('Hack Nerd Font Mono')
-config.font_size = 12.6
+config.font = wezterm.font('JetBrainsMono NL Nerd Font Mono')
+config.font_size = 13
 config.cell_width = 1.0
-config.line_height = 1.1
+config.line_height = 1.0
 config.keys = {
     {
         key = 'F11',

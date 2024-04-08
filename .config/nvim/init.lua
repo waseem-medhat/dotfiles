@@ -74,7 +74,7 @@ require('lazy').setup({
     },
     { 'numToStr/Comment.nvim', opts = {} },
     -- { 'folke/which-key.nvim',  opts = {} },
-    'ellisonleao/gruvbox.nvim',
+    'catppuccin/nvim',
     'nvim-lualine/lualine.nvim',
     'lukas-reineke/indent-blankline.nvim',
     'tpope/vim-fugitive',

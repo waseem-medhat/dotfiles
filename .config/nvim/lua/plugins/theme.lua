@@ -1,31 +1,31 @@
--- require('catppuccin').setup({
---     flavour = "mocha",
---     no_italic = true,
---     -- custom_highlights = function(colors)
---     --     return {
---     --         Normal = { bg = colors.crust }
---     --     }
---     -- end
--- })
-
-require("gruvbox").setup({
-    contrast = "hard",
-    dim_inactive = false,
-    italic = {
-        strings = false,
-        emphasis = false,
-        comments = false,
-        operators = false,
-        folds = false,
-    },
+require('catppuccin').setup({
+    flavour = "mocha",
+    no_italic = true,
+    -- custom_highlights = function(colors)
+    --     return {
+    --         Normal = { bg = colors.crust }
+    --     }
+    -- end
 })
 
-vim.cmd.colorscheme "gruvbox"
+-- require("gruvbox").setup({
+--     contrast = "hard",
+--     dim_inactive = false,
+--     italic = {
+--         strings = false,
+--         emphasis = false,
+--         comments = false,
+--         operators = false,
+--         folds = false,
+--     },
+-- })
+
+vim.cmd.colorscheme "catppuccin"
 
 require('lualine').setup({
     options = {
         icons_enabled = true,
-        theme = 'gruvbox_dark',
+        theme = 'catppuccin',
         component_separators = { left = '', right = '' },
         section_separators = { left = '', right = '' },
     },

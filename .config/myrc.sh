@@ -19,3 +19,6 @@ alias m='make'
 if [ -z "$TMUX" ]; then
     tmux attach || tmux
 fi
+
+touch ~/proj/todo.sh
+~/proj/todo.sh
