@@ -14,6 +14,11 @@ git clone git@github.com:wipdev-tech/dotfiles.git ~/.dotfiles
 ### Tmux
 
 - Run `[Prefix] I` to install Tmux plugins. They are not git-tracked.
+- You will need to install TPM first:
+
+```bash
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
 
 ### Neovim
 
