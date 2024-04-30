@@ -97,6 +97,14 @@
     {
       "alias": "jobs",
       "path": "/home/waseem/proj/jobs"
+    },
+    {
+      "alias": "ccwc",
+      "path": "/home/waseem/proj/ccwc"
+    },
+    {
+      "alias": "ccjson",
+      "path": "/home/waseem/proj/ccjson"
     }
   ]
 }
