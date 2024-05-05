@@ -73,19 +73,30 @@ require('lazy').setup({
         build = ':TSUpdate',
     },
     { 'numToStr/Comment.nvim', opts = {} },
-    -- { 'folke/which-key.nvim',  opts = {} },
-    'catppuccin/nvim',
-    'nvim-lualine/lualine.nvim',
-    'lukas-reineke/indent-blankline.nvim',
-    'tpope/vim-fugitive',
-    'tpope/vim-surround',
-    'christoomey/vim-tmux-navigator',
     {
         'fatih/vim-go',
         config = function()
             vim.g.go_doc_keywordprg_enabled = 0
         end
     },
+    {
+        'nvim-tree/nvim-tree.lua',
+        dependencies = {
+            'nvim-tree/nvim-web-devicons'
+        },
+        opts = {
+            view = {
+                -- side = "right"
+            }
+        }
+    },
+    'catppuccin/nvim',
+    'nvim-lualine/lualine.nvim',
+    'lukas-reineke/indent-blankline.nvim',
+    'tpope/vim-fugitive',
+    'tpope/vim-surround',
+    'christoomey/vim-tmux-navigator',
+    -- { 'folke/which-key.nvim',  opts = {} },
     -- {
     --     'jalvesaq/Nvim-R',
     --     config = function()
@@ -103,6 +114,7 @@ require('lazy').setup({
     -- 'tpope/vim-rhubarb',
 }, {})
 
+-- require('nvim-tree').setup()
 
 require('waseem.options')
 require('waseem.remap')

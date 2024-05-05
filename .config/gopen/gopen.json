@@ -1,5 +1,5 @@
 {
-  "editorCmd": "nvim",
+  "editorCmd": "/home/waseem/Downloads/software/nvim.appimage",
   "customBehaviour": true,
   "aliases": [
     {

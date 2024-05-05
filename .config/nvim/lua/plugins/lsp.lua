@@ -87,6 +87,13 @@ local handlers = {
             on_attach = on_attach,
         }
     end,
+    ["elixirls"] = function()
+        require("lspconfig").elixirls.setup{
+            cmd = {"/home/waseem/Downloads/software/elixir-ls/language_server.sh"},
+            on_attach = on_attach,
+            capabilities = capabilities,
+        }
+    end
 }
 
 mason_lspconfig.setup {

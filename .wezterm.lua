@@ -8,10 +8,10 @@ end
 -- config.window_decorations = "NONE"
 config.color_scheme = 'catppuccin-mocha'
 config.enable_tab_bar = false
-config.font = wezterm.font('JetBrainsMono NL Nerd Font Mono')
+config.font = wezterm.font('Hack Nerd Font Mono')
 config.font_size = 13
 config.cell_width = 1.0
-config.line_height = 1.0
+config.line_height = 1.10
 config.keys = {
     {
         key = 'F11',

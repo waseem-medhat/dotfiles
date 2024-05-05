@@ -21,6 +21,7 @@ vim.keymap.set('n', '<C-s>', ':w<Enter>', { desc = 'Write/Save' })
 vim.keymap.set('n', '<leader>sp', ':set spell!<Enter>', { desc = 'Toggle [sp]ell checking' })
 vim.keymap.set('n', '<leader>lr', ':LspRestart<Enter>', { desc = '[L]SP [R]estart' })
 vim.keymap.set('n', '<leader>ss', ':e /tmp/scratch<Enter>', { desc = '[S]tart a [S]cratch buffer (tmp file)' })
+vim.keymap.set('n', '<leader>t', ':NvimTreeFindFileToggle<Enter>', { desc = 'Toggle file [T]ree' })
 vim.keymap.set('i', '<C-s>', '<Esc>:w<Enter>a', { desc = 'Write/Save' })
 
 -- Git remaps
