@@ -4,107 +4,133 @@
   "aliases": [
     {
       "alias": "gp",
-      "path": "/home/waseem/proj/gopen"
+      "path": "/home/waseem/proj/gopen",
+      "git_repo": "https://github.com/wipdev-tech/gopen"
     },
     {
       "alias": "wez",
-      "path": "/home/waseem/.config/wezterm"
+      "path": "/home/waseem/.config/wezterm",
+      "git_repo": ""
     },
     {
       "alias": "fp",
-      "path": "/home/waseem/proj/funutils"
+      "path": "/home/waseem/proj/funutils",
+      "git_repo": ""
     },
     {
       "alias": "nv",
-      "path": "/home/waseem/.config/nvim"
+      "path": "/home/waseem/.config/nvim",
+      "git_repo": ""
     },
     {
       "alias": "chrp",
-      "path": "/home/waseem/proj/chirpy"
+      "path": "/home/waseem/proj/chirpy",
+      "git_repo": ""
     },
     {
       "alias": "sch",
-      "path": "/home/waseem/proj/goschulte"
+      "path": "/home/waseem/proj/goschulte",
+      "git_repo": ""
     },
     {
       "alias": "cc",
-      "path": "/home/waseem/proj/cc4e"
+      "path": "/home/waseem/proj/cc4e",
+      "git_repo": ""
     },
     {
       "alias": "leet",
-      "path": "/home/waseem/proj/leetcode"
+      "path": "/home/waseem/proj/leetcode",
+      "git_repo": ""
     },
     {
       "alias": "aoc",
-      "path": "/home/waseem/proj/aoc2023"
+      "path": "/home/waseem/proj/aoc2023",
+      "git_repo": ""
     },
     {
       "alias": "blog",
-      "path": "/home/waseem/proj/wipdev-site-v2"
+      "path": "/home/waseem/proj/wipdev-site-v2",
+      "git_repo": ""
     },
     {
       "alias": "tdt",
-      "path": "/home/waseem/proj/tdt"
+      "path": "/home/waseem/proj/tdt",
+      "git_repo": ""
     },
     {
       "alias": "poke",
-      "path": "/home/waseem/proj/go-pokedex"
+      "path": "/home/waseem/proj/go-pokedex",
+      "git_repo": ""
     },
     {
       "alias": "pg",
-      "path": "/home/waseem/proj/ed/playground"
+      "path": "/home/waseem/proj/ed/playground",
+      "git_repo": ""
     },
     {
       "alias": "banc",
-      "path": "/home/waseem/Downloads/worldbanc"
+      "path": "/home/waseem/Downloads/worldbanc",
+      "git_repo": ""
     },
     {
       "alias": "agg",
-      "path": "/home/waseem/proj/blogagg"
+      "path": "/home/waseem/proj/blogagg",
+      "git_repo": ""
     },
     {
       "alias": "readme",
-      "path": "/home/waseem/proj/project-readme-template"
+      "path": "/home/waseem/proj/project-readme-template",
+      "git_repo": ""
     },
     {
       "alias": "pmdb",
-      "path": "/home/waseem/proj/pmdb"
+      "path": "/home/waseem/proj/pmdb",
+      "git_repo": ""
     },
     {
       "alias": "lurc",
-      "path": "/home/waseem/proj/lurc"
+      "path": "/home/waseem/proj/lurc",
+      "git_repo": ""
     },
     {
       "alias": "this",
-      "path": "/home/waseem/proj/this-or-that-lang"
+      "path": "/home/waseem/proj/this-or-that-lang",
+      "git_repo": ""
     },
     {
       "alias": "ssg",
-      "path": "/home/waseem/proj/pyssg"
+      "path": "/home/waseem/proj/pyssg",
+      "git_repo": ""
     },
     {
       "alias": "algo",
-      "path": "/home/waseem/proj/prime-algo"
+      "path": "/home/waseem/proj/prime-algo",
+      "git_repo": ""
     },
     {
       "alias": "dot",
-      "path": "/home/waseem/.dotfiles"
+      "path": "/home/waseem/.dotfiles",
+      "git_repo": ""
     },
     {
       "alias": "money",
-      "path": "/home/waseem/proj/moneygopher"
+      "path": "/home/waseem/proj/moneygopher",
+      "git_repo": ""
     },
     {
       "alias": "jobs",
-      "path": "/home/waseem/proj/jobs"
+      "path": "/home/waseem/proj/jobs",
+      "git_repo": ""
     },
     {
       "alias": "ccwc",
-      "path": "/home/waseem/proj/ccwc"
+      "path": "/home/waseem/proj/ccwc",
+      "git_repo": ""
     },
     {
       "alias": "ccjson",
-      "path": "/home/waseem/proj/ccjson"
+      "path": "/home/waseem/proj/ccjson",
+      "git_repo": ""
     }
   ]
 }
