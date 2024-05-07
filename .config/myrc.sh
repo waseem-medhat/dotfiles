@@ -4,6 +4,9 @@
 # up with other config introduced by other installed software (e.g., nvm), I
 # put them in this file to be simply sourced by .bashrc
 
+. "$HOME/.asdf/asdf.sh"
+. "$HOME/.asdf/completions/asdf.bash"
+
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:~/go/bin
 export PATH=$PATH:~/.pyenv/bin/
@@ -18,9 +21,6 @@ alias ll='lsd -la'
 alias l='lsd'
 alias tree='lsd -a --tree --group-dirs=first -I "node_modules" -I ".git"'
 alias m='make'
-
-. "$HOME/.asdf/asdf.sh"
-. "$HOME/.asdf/completions/asdf.bash"
 
 if [ -z "$TMUX" ]; then
     tmux attach || tmux
