@@ -24,6 +24,7 @@ vim.cmd.colorscheme "catppuccin"
 
 require('lualine').setup({
     options = {
+        disabled_filetypes = { 'NvimTree' },
         icons_enabled = true,
         theme = 'catppuccin',
         component_separators = { left = '', right = '' },
