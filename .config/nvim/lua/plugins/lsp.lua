@@ -88,8 +88,8 @@ local handlers = {
         }
     end,
     ["elixirls"] = function()
-        require("lspconfig").elixirls.setup{
-            cmd = {"/home/waseem/Downloads/software/elixir-ls/language_server.sh"},
+        require("lspconfig").elixirls.setup {
+            cmd = { "/home/waseem/Downloads/software/elixir-ls/language_server.sh" },
             on_attach = on_attach,
             capabilities = capabilities,
         }
@@ -107,6 +107,25 @@ mason_lspconfig.setup {
     },
     handlers = handlers
 }
+
+-- Prettier
+require("conform").setup({
+    formatters_by_ft = {
+        javascript = { { "prettierd", "prettier" } },
+        typescript = { { "prettierd", "prettier" } },
+    },
+    format_on_save = {
+        timeout_ms = 10,
+        lsp_fallback = true,
+    },
+})
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+    pattern = { "*.ts" },
+    callback = function(args)
+        require("conform").format({ bufnr = args.buf })
+    end,
+})
 
 -- local servers = {
 --     tsserver = {},

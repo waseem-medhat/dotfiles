@@ -96,6 +96,7 @@ require('lazy').setup({
     'tpope/vim-fugitive',
     'tpope/vim-surround',
     'christoomey/vim-tmux-navigator',
+    'stevearc/conform.nvim',
     -- { 'folke/which-key.nvim',  opts = {} },
     -- {
     --     'jalvesaq/Nvim-R',

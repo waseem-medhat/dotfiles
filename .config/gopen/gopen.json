@@ -85,7 +85,7 @@
     {
       "alias": "pmdb",
       "path": "/home/waseem/proj/pmdb",
-      "git_repo": ""
+      "git_repo": "https://github.com/waseem-medhat/pmdb"
     },
     {
       "alias": "lurc",
@@ -125,11 +125,16 @@
     {
       "alias": "ccwc",
       "path": "/home/waseem/proj/ccwc",
-      "git_repo": ""
+      "git_repo": "https://github.com/waseem-medhat/ccwc"
     },
     {
       "alias": "ccjson",
       "path": "/home/waseem/proj/ccjson",
+      "git_repo": "https://github.com/waseem-medhat/ccjson"
+    },
+    {
+      "alias": "jobstats",
+      "path": "/home/waseem/proj/jobstats",
       "git_repo": ""
     }
   ]
