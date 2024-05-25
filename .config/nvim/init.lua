@@ -87,6 +87,9 @@ require('lazy').setup({
         opts = {
             view = {
                 -- side = "right"
+            },
+            git = {
+                enable = false
             }
         }
     },

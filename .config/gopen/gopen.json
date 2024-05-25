@@ -24,8 +24,8 @@
     },
     {
       "alias": "chrp",
-      "path": "/home/waseem/proj/chirpy",
-      "git_repo": ""
+      "path": "/home/waseem/proj/personal/chirpy",
+      "git_repo": "https://github.com/waseem-medhat/chirpy"
     },
     {
       "alias": "sch",
@@ -49,7 +49,7 @@
     },
     {
       "alias": "blog",
-      "path": "/home/waseem/proj/wipdev-site-v2",
+      "path": "/home/waseem/proj/personal/wipdev-site-v2",
       "git_repo": ""
     },
     {
@@ -74,8 +74,8 @@
     },
     {
       "alias": "agg",
-      "path": "/home/waseem/proj/blogagg",
-      "git_repo": ""
+      "path": "/home/waseem/proj/personal/blogagg",
+      "git_repo": "https://github.com/waseem-medhat/blogagg"
     },
     {
       "alias": "readme",
@@ -84,7 +84,7 @@
     },
     {
       "alias": "pmdb",
-      "path": "/home/waseem/proj/pmdb",
+      "path": "/home/waseem/proj/personal/pmdb",
       "git_repo": "https://github.com/waseem-medhat/pmdb"
     },
     {
@@ -114,12 +114,12 @@
     },
     {
       "alias": "money",
-      "path": "/home/waseem/proj/moneygopher",
+      "path": "/home/waseem/proj/personal/moneygopher",
       "git_repo": ""
     },
     {
       "alias": "jobs",
-      "path": "/home/waseem/proj/jobs",
+      "path": "/home/waseem/proj/personal/jobs",
       "git_repo": ""
     },
     {
@@ -135,6 +135,16 @@
     {
       "alias": "jobstats",
       "path": "/home/waseem/proj/jobstats",
+      "git_repo": ""
+    },
+    {
+      "alias": "rtmd",
+      "path": "/home/waseem/proj/rtmd",
+      "git_repo": ""
+    },
+    {
+      "alias": "talentlink",
+      "path": "/home/waseem/proj/personal/talentlink",
       "git_repo": ""
     }
   ]
