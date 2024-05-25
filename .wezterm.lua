@@ -6,7 +6,7 @@ if wezterm.config_builder then
 end
 
 -- config.window_decorations = "NONE"
-config.color_scheme = 'catppuccin-mocha'
+config.color_scheme = 'Gruvbox dark, hard (base16)'
 config.enable_tab_bar = false
 config.font = wezterm.font('Hack Nerd Font Mono')
 config.font_size = 13

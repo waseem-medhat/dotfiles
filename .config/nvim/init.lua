@@ -93,7 +93,7 @@ require('lazy').setup({
             }
         }
     },
-    'catppuccin/nvim',
+    'ellisonleao/gruvbox.nvim',
     'nvim-lualine/lualine.nvim',
     'lukas-reineke/indent-blankline.nvim',
     'tpope/vim-fugitive',
