@@ -21,7 +21,7 @@ local on_attach = function(_, bufnr)
 
     -- See `:help K` for why this keymap
     nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
-    nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
+    -- nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
 
     -- Lesser used LSP functionality
     nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
@@ -77,8 +77,8 @@ local handlers = {
         lspconfig.tailwindcss.setup({
             on_attach = on_attach,
             capabilities = capabilities,
-            filetypes = { "templ", "astro", "javascript", "typescript", "react" },
-            init_options = { userLanguages = { templ = "html" } },
+            filetypes = { "templ", "astro", "javascript", "typescript", "react", "heex" },
+            init_options = { userLanguages = { templ = "html", heex = "html" } },
         })
     end,
     ["templ"] = function() -- default handler (optional)
@@ -87,6 +87,13 @@ local handlers = {
             on_attach = on_attach,
         }
     end,
+    ["html"] = function()
+        require("lspconfig").html.setup {
+            on_attach = on_attach,
+            capabilities = capabilities,
+            filetypes = {"html"}
+        }
+    end
     -- ["elixirls"] = function()
     --     require("lspconfig").elixirls.setup {
     --         cmd = { "/home/waseem/Downloads/software/elixir-ls/language_server.sh" },
@@ -106,21 +113,22 @@ mason_lspconfig.setup {
         "tailwindcss",
         "pyright",
         "elixirls",
+        "r_language_server"
     },
     handlers = handlers
 }
 
 -- Prettier
-require("conform").setup({
-    formatters_by_ft = {
-        javascript = { { "prettierd", "prettier" } },
-        typescript = { { "prettierd", "prettier" } },
-    },
-    format_on_save = {
-        timeout_ms = 10,
-        lsp_fallback = true,
-    },
-})
+-- require("conform").setup({
+--     formatters_by_ft = {
+--         javascript = { { "prettierd", "prettier" } },
+--         typescript = { { "prettierd", "prettier" } },
+--     },
+--     format_on_save = {
+--         timeout_ms = 10,
+--         lsp_fallback = true,
+--     },
+-- })
 
 vim.api.nvim_create_autocmd("BufWritePre", {
     pattern = { "*.ts" },

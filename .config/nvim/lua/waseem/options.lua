@@ -9,7 +9,7 @@ vim.o.splitright = true
 
 vim.wo.number = true
 vim.wo.relativenumber = true
-vim.wo.cursorline = true
+vim.wo.cursorline = false
 
 vim.wo.signcolumn = 'yes'
 vim.o.completeopt = 'menuone,noselect'
@@ -56,4 +56,3 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     group = highlight_group,
     pattern = '*',
 })
-

@@ -1,5 +1,6 @@
 require("ibl").setup {
-    scope = { enabled = false }
+    scope = { enabled = false },
+    indent = { char = "" },
 }
 
 -- Guides as bg highlights instead of a line

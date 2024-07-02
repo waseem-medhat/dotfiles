@@ -4,8 +4,8 @@
   "aliases": [
     {
       "alias": "gp",
-      "path": "/home/waseem/proj/gopen",
-      "git_repo": "https://github.com/wipdev-tech/gopen"
+      "path": "/home/waseem/proj/personal/gopen",
+      "git_repo": ""
     },
     {
       "alias": "wez",
@@ -145,6 +145,21 @@
     {
       "alias": "talentlink",
       "path": "/home/waseem/proj/personal/talentlink",
+      "git_repo": ""
+    },
+    {
+      "alias": "gopen",
+      "path": "/home/waseem/proj/personal/gopen",
+      "git_repo": ""
+    },
+    {
+      "alias": "skill",
+      "path": "/home/waseem/proj/personal/skillstackr",
+      "git_repo": ""
+    },
+    {
+      "alias": "hangman",
+      "path": "/home/waseem/proj/hangman-squad",
       "git_repo": ""
     }
   ]
