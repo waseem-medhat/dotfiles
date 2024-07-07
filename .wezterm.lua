@@ -6,7 +6,8 @@ if wezterm.config_builder then
 end
 
 -- config.window_decorations = "NONE"
-config.color_scheme = 'catppuccin-mocha'
+config.default_prog = { 'tmux' }
+config.color_scheme = 'iceberg-dark'
 config.enable_tab_bar = false
 config.font = wezterm.font('Hack Nerd Font Mono')
 config.font_size = 13
@@ -19,10 +20,10 @@ config.keys = {
     },
 }
 config.window_padding = {
-  left = 4,
-  right = 4,
-  top = 4,
-  bottom = 0,
+    left = 4,
+    right = 4,
+    top = 4,
+    bottom = 0,
 }
 
 

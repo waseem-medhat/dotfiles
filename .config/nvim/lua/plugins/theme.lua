@@ -1,32 +1,10 @@
-require('catppuccin').setup({
-    flavour = "mocha",
-    no_italic = true,
-    -- custom_highlights = function(colors)
-    --     return {
-    --         Normal = { bg = colors.crust }
-    --     }
-    -- end
-})
-
--- require("gruvbox").setup({
---     contrast = "hard",
---     dim_inactive = false,
---     italic = {
---         strings = false,
---         emphasis = false,
---         comments = false,
---         operators = false,
---         folds = false,
---     },
--- })
-
-vim.cmd.colorscheme "catppuccin"
+vim.cmd.colorscheme "iceberg"
 
 require('lualine').setup({
     options = {
         disabled_filetypes = { 'NvimTree' },
         icons_enabled = true,
-        theme = 'catppuccin',
+        theme = 'iceberg_dark',
         component_separators = { left = '', right = '' },
         section_separators = { left = '', right = '' },
     },

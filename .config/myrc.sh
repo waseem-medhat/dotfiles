@@ -21,7 +21,3 @@ alias ll='lsd -la'
 alias l='lsd'
 alias tree='lsd -a --tree --group-dirs=first -I "node_modules" -I ".git"'
 alias m='make'
-
-if [ -z "$TMUX" ]; then
-    tmux attach || tmux
-fi

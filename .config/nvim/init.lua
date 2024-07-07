@@ -93,7 +93,7 @@ require('lazy').setup({
             }
         }
     },
-    'catppuccin/nvim',
+    'oahlen/iceberg.nvim',
     'nvim-lualine/lualine.nvim',
     'lukas-reineke/indent-blankline.nvim',
     'tpope/vim-fugitive',

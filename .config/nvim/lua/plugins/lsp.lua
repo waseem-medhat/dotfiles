@@ -77,7 +77,7 @@ local handlers = {
         lspconfig.tailwindcss.setup({
             on_attach = on_attach,
             capabilities = capabilities,
-            filetypes = { "templ", "astro", "javascript", "typescript", "react", "heex" },
+            filetypes = { "templ", "astro", "javascript", "typescript", "react", "heex", "elixir" },
             init_options = { userLanguages = { templ = "html", heex = "html" } },
         })
     end,
@@ -94,13 +94,6 @@ local handlers = {
             filetypes = {"html"}
         }
     end
-    -- ["elixirls"] = function()
-    --     require("lspconfig").elixirls.setup {
-    --         cmd = { "/home/waseem/Downloads/software/elixir-ls/language_server.sh" },
-    --         on_attach = on_attach,
-    --         capabilities = capabilities,
-    --     }
-    -- end
 }
 
 mason_lspconfig.setup {
