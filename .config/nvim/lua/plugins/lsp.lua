@@ -98,7 +98,7 @@ local handlers = {
 
 mason_lspconfig.setup {
     ensure_installed = {
-        "tsserver",
+        "ts_ls",
         "html",
         "gopls",
         "templ",
@@ -106,7 +106,7 @@ mason_lspconfig.setup {
         "tailwindcss",
         "pyright",
         "elixirls",
-        "r_language_server"
+        -- "r_language_server"
     },
     handlers = handlers
 }

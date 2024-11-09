@@ -93,7 +93,12 @@ require('lazy').setup({
             }
         }
     },
-    'oahlen/iceberg.nvim',
+    {
+        "folke/tokyonight.nvim",
+        lazy = false,
+        priority = 1000,
+        opts = {},
+    },
     'nvim-lualine/lualine.nvim',
     'lukas-reineke/indent-blankline.nvim',
     'tpope/vim-fugitive',

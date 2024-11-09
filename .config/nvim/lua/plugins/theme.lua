@@ -1,4 +1,4 @@
-vim.cmd.colorscheme "iceberg"
+vim.cmd.colorscheme "tokyonight-night"
 
 require('lualine').setup({
     options = {
@@ -6,7 +6,8 @@ require('lualine').setup({
         icons_enabled = true,
         theme = 'iceberg_dark',
         component_separators = { left = '', right = '' },
-        section_separators = { left = '', right = '' },
+        -- section_separators = { left = '', right = '' },
+        section_separators = { left = '', right = '' },
     },
     sections = {
         lualine_a = {
@@ -16,7 +17,8 @@ require('lualine').setup({
                 draw_empty = false,    -- Whether to draw component even if it's empty.
                 padding = 1,           -- Adds padding to the left and right of components.
                 fmt = function(str, _) -- Format function, formats the component's output.
-                    return " " .. str
+                    -- return " " .. str
+                    return str
                 end,
             }
         }

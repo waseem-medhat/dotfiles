@@ -161,6 +161,21 @@
       "alias": "hangman",
       "path": "/home/waseem/proj/hangman-squad",
       "git_repo": ""
+    },
+    {
+      "alias": "spirit",
+      "path": "/home/waseem/proj/practicecraft/spirit",
+      "git_repo": ""
+    },
+    {
+      "alias": "spiritex",
+      "path": "/home/waseem/proj/practicecraft/spirit-exercises",
+      "git_repo": ""
+    },
+    {
+      "alias": "shein",
+      "path": "/home/waseem/proj/freelance/shein_price_calc",
+      "git_repo": ""
     }
   ]
 }
