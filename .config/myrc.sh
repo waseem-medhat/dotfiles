@@ -6,10 +6,22 @@
 
 . "$HOME/.asdf/asdf.sh"
 . "$HOME/.asdf/completions/asdf.bash"
+export ASDF_GOLANG_MOD_VERSION_ENABLED=true
 
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:~/go/bin
-export PATH=$PATH:~/.pyenv/bin/
+paths=(
+    "/usr/local/go/bin"
+    "~/go/bin"
+    "~/.pyenv/bin/"
+    "~/Downloads/software/emsdk"
+    "~/Downloads/software/emsdk/upstream/emscripten"
+)
+
+echo "${paths[@]}"
+
+for p in "${paths[@]}"; do
+    export PATH="$PATH:$p"
+done
+
 export PYENV_ROOT='~/.pyenv/'
 export FLYCTL_INSTALL="/home/waseem/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
@@ -18,15 +30,9 @@ export PATH="$FLYCTL_INSTALL/bin:$PATH"
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u:\[\033[01;34m\]\w\[\033[00m\]\$ '
 
 alias nv='~/Downloads/software/nvim.appimage'
-# alias nv='nvim'
+alias nvim='nv'
 alias g='gopen'
 alias ll='lsd -la'
 alias l='lsd'
 alias tree='lsd -a --tree --group-dirs=first -I "node_modules" -I ".git"'
 alias m='make'
-
-if [ -z "$TMUX" ]; then
-    tmux attach-session -t default || tmux new-session -s default
-fi
-
-cat ~/sticky_note.md

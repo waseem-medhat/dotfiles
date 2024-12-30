@@ -176,6 +176,16 @@
       "alias": "shein",
       "path": "/home/waseem/proj/freelance/shein_price_calc",
       "git_repo": ""
+    },
+    {
+      "alias": "aoc24",
+      "path": "/home/waseem/proj/personal/aoc/aoc_2024_elixir",
+      "git_repo": ""
+    },
+    {
+      "alias": "boot",
+      "path": "/home/waseem/proj/bootdotdev/go-api-gate",
+      "git_repo": ""
     }
   ]
 }

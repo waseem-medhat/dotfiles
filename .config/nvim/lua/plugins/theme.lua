@@ -4,10 +4,10 @@ require('lualine').setup({
     options = {
         disabled_filetypes = { 'NvimTree' },
         icons_enabled = true,
-        theme = 'iceberg_dark',
+        theme = 'auto',
         component_separators = { left = '', right = '' },
-        -- section_separators = { left = '', right = '' },
-        section_separators = { left = '', right = '' },
+        section_separators = { left = '', right = '' },
+        -- section_separators = { left = '', right = '' },
     },
     sections = {
         lualine_a = {
@@ -18,7 +18,7 @@ require('lualine').setup({
                 padding = 1,           -- Adds padding to the left and right of components.
                 fmt = function(str, _) -- Format function, formats the component's output.
                     -- return " " .. str
-                    return str
+                    return string.sub(str, 0, 1)
                 end,
             }
         }
