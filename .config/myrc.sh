@@ -8,23 +8,21 @@
 . "$HOME/.asdf/completions/asdf.bash"
 export ASDF_GOLANG_MOD_VERSION_ENABLED=true
 
+export PYENV_ROOT='~/.pyenv/'
+export FLYCTL_INSTALL="/home/waseem/.fly"
+
 paths=(
     "/usr/local/go/bin"
     "~/go/bin"
     "~/.pyenv/bin/"
     "~/Downloads/software/emsdk"
     "~/Downloads/software/emsdk/upstream/emscripten"
+    "$FLYCTL_INSTALL/bin"
 )
-
-echo "${paths[@]}"
 
 for p in "${paths[@]}"; do
     export PATH="$PATH:$p"
 done
-
-export PYENV_ROOT='~/.pyenv/'
-export FLYCTL_INSTALL="/home/waseem/.fly"
-export PATH="$FLYCTL_INSTALL/bin:$PATH"
 
 
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u:\[\033[01;34m\]\w\[\033[00m\]\$ '
@@ -36,3 +34,4 @@ alias ll='lsd -la'
 alias l='lsd'
 alias tree='lsd -a --tree --group-dirs=first -I "node_modules" -I ".git"'
 alias m='make'
+alias lg='lazygit'

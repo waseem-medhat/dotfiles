@@ -101,37 +101,16 @@ require('lazy').setup({
     },
     'nvim-lualine/lualine.nvim',
     'lukas-reineke/indent-blankline.nvim',
-    'tpope/vim-fugitive',
     'tpope/vim-surround',
     'christoomey/vim-tmux-navigator',
-    'stevearc/conform.nvim',
-    -- { 'folke/which-key.nvim',  opts = {} },
-    -- {
-    --     'jalvesaq/Nvim-R',
-    --     config = function()
-    --         vim.g.R_assign = 0
-    --     end
-    -- },
-    -- {
-    --     'Olical/conjure',
-    --     dependencies = {
-    --         'tpope/vim-dispatch',
-    --         'clojure-vim/vim-jack-in',
-    --         'radenling/vim-dispatch-neovim'
-    --     },
-    -- },
-    -- 'tpope/vim-rhubarb',
+    { 'folke/which-key.nvim',  opts = {} },
 }, {})
-
--- require('nvim-tree').setup()
 
 require('waseem.options')
 require('waseem.remap')
--- require('waseem.r')
 
-require('plugins.lsp')
 require('plugins.cmp')
+require('plugins.lsp')
 require('plugins.telescope')
-require('plugins.treesitter')
 require('plugins.theme')
-require('plugins.indent-blankline')
+require('plugins.treesitter')
