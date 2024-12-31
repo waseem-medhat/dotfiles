@@ -15,9 +15,8 @@ paths=(
     "/usr/local/go/bin"
     "~/go/bin"
     "~/.pyenv/bin/"
-    "~/Downloads/software/emsdk"
-    "~/Downloads/software/emsdk/upstream/emscripten"
     "$FLYCTL_INSTALL/bin"
+    "~/.config/tmux/plugins/tmuxifier/bin"
 )
 
 for p in "${paths[@]}"; do
@@ -35,3 +34,4 @@ alias l='lsd'
 alias tree='lsd -a --tree --group-dirs=first -I "node_modules" -I ".git"'
 alias m='make'
 alias lg='lazygit'
+alias x='exit'

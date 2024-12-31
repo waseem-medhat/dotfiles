@@ -91,21 +91,54 @@ local handlers = {
         require("lspconfig").html.setup {
             on_attach = on_attach,
             capabilities = capabilities,
-            filetypes = {"html"}
+            filetypes = { "html" }
         }
+    end,
+    ["ts_ls"] = function()
+        local lspconfig = require("lspconfig")
+        local mason_registry = require("mason-registry")
+
+        local mason_install_path = mason_registry.get_package("vue-language-server"):get_install_path()
+        local vue_language_server_path = mason_install_path .. "/node_modules/@vue/language-server"
+
+        lspconfig.ts_ls.setup({
+            init_options = {
+                plugins = {
+                    {
+                        name = "@vue/typescript-plugin",
+                        location = vue_language_server_path,
+                        languages = { "vue" },
+                    },
+                },
+            },
+            filetypes = {
+                "javascript",
+                "typescript",
+                "vue",
+            },
+            on_attach = on_attach,
+            capabilities = capabilities,
+            commands = {
+                -- OrganizeImports = {
+                --     organize_imports,
+                --     description = "Organize Imports",
+                -- },
+            },
+        })
     end
 }
 
 mason_lspconfig.setup {
     ensure_installed = {
-        "ts_ls",
-        "html",
-        "gopls",
-        "templ",
-        "lua_ls",
-        "tailwindcss",
-        "pyright",
         "elixirls",
+        "gopls",
+        "html",
+        "lua_ls",
+        "pyright",
+        "tailwindcss",
+        "templ",
+        "ts_ls",
+        "volar",
         -- "r_language_server"
     },
     handlers = handlers,

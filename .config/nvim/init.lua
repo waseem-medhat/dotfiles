@@ -44,9 +44,10 @@ require('lazy').setup({
                 changedelete = { text = '~' },
             },
             on_attach = function(bufnr)
-                vim.keymap.set('n', '<leader>hp', require('gitsigns').prev_hunk,
+                local gitsigns = require('gitsigns')
+                vim.keymap.set('n', '<leader>hp', function() gitsigns.nav_hunk('next') end,
                     { buffer = bufnr, desc = '[H]unks: go to [P]revious' })
-                vim.keymap.set('n', '<leader>hn', require('gitsigns').next_hunk,
+                vim.keymap.set('n', '<leader>hn', function() gitsigns.nav_hunk('prev') end,
                     { buffer = bufnr, desc = '[H]unks: go to [N]ext' })
                 vim.keymap.set('n', '<leader>hl', require('gitsigns').preview_hunk,
                     { buffer = bufnr, desc = '[H]unks: [L]ook at (preview) hunk' })
@@ -80,20 +81,6 @@ require('lazy').setup({
         end
     },
     {
-        'nvim-tree/nvim-tree.lua',
-        dependencies = {
-            'nvim-tree/nvim-web-devicons'
-        },
-        opts = {
-            view = {
-                -- side = "right"
-            },
-            git = {
-                enable = false
-            }
-        }
-    },
-    {
         "folke/tokyonight.nvim",
         lazy = false,
         priority = 1000,
@@ -104,6 +91,15 @@ require('lazy').setup({
     'tpope/vim-surround',
     'christoomey/vim-tmux-navigator',
     { 'folke/which-key.nvim',  opts = {} },
+    {
+        'stevearc/oil.nvim',
+        ---@module 'oil'
+        ---@type oil.SetupOpts
+        opts = {
+            keymaps = { ["<BS>"] = { "actions.parent", mode = "n" } }
+        },
+        dependencies = { { "echasnovski/mini.icons", opts = {} } },
+    }
 }, {})
 
 require('waseem.options')
