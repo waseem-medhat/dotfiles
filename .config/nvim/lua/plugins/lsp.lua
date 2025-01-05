@@ -78,7 +78,16 @@ local handlers = {
             on_attach = on_attach,
             capabilities = capabilities,
             filetypes = { "templ", "astro", "javascript", "typescript", "react", "heex", "elixir" },
-            init_options = { userLanguages = { templ = "html", heex = "html" } },
+            -- init_options = { userLanguages = { templ = "html", heex = "html" } },
+            settings = {
+                tailwindCSS = {
+                    includeLanguages = {
+                        elixir = "html-eex",
+                        eelixir = "html-eex",
+                        heex = "html-eex",
+                    },
+                },
+            },
         })
     end,
     ["templ"] = function() -- default handler (optional)

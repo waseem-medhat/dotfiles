@@ -1,6 +1,6 @@
 {
   "editorCmd": "/home/waseem/Downloads/software/nvim.appimage",
-  "customBehaviour": true,
+  "customBehaviour": false,
   "aliases": [
     {
       "alias": "gp",

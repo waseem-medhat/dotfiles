@@ -96,7 +96,14 @@ require('lazy').setup({
         ---@module 'oil'
         ---@type oil.SetupOpts
         opts = {
-            keymaps = { ["<BS>"] = { "actions.parent", mode = "n" } }
+            keymaps = {
+                ["<BS>"] = { "actions.parent", mode = "n" },
+                ["<C-h>"] = false,
+                ["<C-l>"] = false
+            },
+            view_options = {
+                show_hidden = true
+            }
         },
         dependencies = { { "echasnovski/mini.icons", opts = {} } },
     }
