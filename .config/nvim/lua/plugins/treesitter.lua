@@ -1,24 +1,9 @@
--- TREESITTER SETUP --
-
-require('nvim-treesitter.configs').setup {
+local opts = {
     modules = {},
     sync_install = false,
     ignore_install = {},
     ensure_installed = {
-        -- 'clojure',
-        'elixir',
-        'go',
-        'heex',
-        'javascript',
-        'lua',
-        'python',
-        'r',
-        'svelte',
-        'templ',
-        'tsx',
-        'typescript',
-        'vimdoc',
-        'vim'
+        'elixir', 'go', 'heex', 'javascript', 'lua', 'python', 'r', 'templ', 'tsx', 'typescript', 'vimdoc', 'vim', 'vue'
     },
     auto_install = false,
 
@@ -38,9 +23,7 @@ require('nvim-treesitter.configs').setup {
             enable = true,
             lookahead = true, -- Automatically jump forward to textobj, similar to targets.vim
             keymaps = {
-                -- You can use the capture groups defined in textobjects.scm
-                ['aa'] = '@parameter.outer',
-                ['ia'] = '@parameter.inner',
+                -- You can use the capture groups defined in textobjects.scm ['aa'] = '@parameter.outer', ['ia'] = '@parameter.inner',
                 ['af'] = '@function.outer',
                 ['if'] = '@function.inner',
                 ['ac'] = '@class.outer',
@@ -79,4 +62,15 @@ require('nvim-treesitter.configs').setup {
     },
 }
 
+local config = function ()
+    require'nvim-treesitter.configs'.setup(opts)
+end
 
+return {
+    'nvim-treesitter/nvim-treesitter',
+    dependencies = {
+        'nvim-treesitter/nvim-treesitter-textobjects',
+    },
+    build = ':TSUpdate',
+    config = config
+}

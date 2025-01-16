@@ -1,6 +1,4 @@
--- LSP SETUP --
-
-local on_attach = function(_, bufnr)
+local on_attach_fn = function(_, bufnr)
     local nmap = function(keys, func, desc)
         if desc then
             desc = 'LSP: ' .. desc
@@ -22,6 +20,7 @@ local on_attach = function(_, bufnr)
     -- See `:help K` for why this keymap
     nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
     -- nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
+    vim.keymap.set('n', '<leader>lr', ':LspRestart<Enter>', { desc = '[L]SP [R]estart' })
 
     -- Lesser used LSP functionality
     nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
@@ -39,117 +38,128 @@ local on_attach = function(_, bufnr)
     nmap('<leader>f', vim.cmd.Format, '[F]ormat')
 end
 
--- Setup neovim lua configuration
-require('neodev').setup()
-
--- nvim-cmp supports additional completion capabilities, so broadcast that to servers
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
-
-
-local mason_lspconfig = require 'mason-lspconfig'
-
-local handlers = {
-    function(server_name) -- default handler (optional)
-        require("lspconfig")[server_name].setup {
-            on_attach = on_attach,
-            capabilities = capabilities,
-        }
-    end,
-    ["lua_ls"] = function()
-        local lspconfig = require("lspconfig")
-        lspconfig.lua_ls.setup {
-            on_attach = on_attach,
-            capabilities = capabilities,
-            settings = {
-                Lua = {
-                    diagnostics = {
-                        globals = { "vim" }
-                    },
-                    workspace = { checkThirdParty = false },
-                    telemetry = { enable = false },
+local setup_handlers = function(capabilities, on_attach)
+    return {
+        function(server_name) -- default handler (optional)
+            require("lspconfig")[server_name].setup {
+                on_attach = on_attach,
+                capabilities = capabilities,
+            }
+        end,
+        ["lua_ls"] = function()
+            local lspconfig = require("lspconfig")
+            lspconfig.lua_ls.setup {
+                on_attach = on_attach,
+                capabilities = capabilities,
+                settings = {
+                    Lua = {
+                        diagnostics = {
+                            globals = { "vim" }
+                        },
+                        workspace = { checkThirdParty = false },
+                        telemetry = { enable = false },
+                    }
                 }
             }
-        }
-    end,
-    ["tailwindcss"] = function()
-        local lspconfig = require("lspconfig")
-        lspconfig.tailwindcss.setup({
-            on_attach = on_attach,
-            capabilities = capabilities,
-            filetypes = { "templ", "astro", "javascript", "typescript", "react", "heex", "elixir" },
-            -- init_options = { userLanguages = { templ = "html", heex = "html" } },
-            settings = {
-                tailwindCSS = {
-                    includeLanguages = {
-                        elixir = "html-eex",
-                        eelixir = "html-eex",
-                        heex = "html-eex",
+        end,
+        ["tailwindcss"] = function()
+            local lspconfig = require("lspconfig")
+            lspconfig.tailwindcss.setup({
+                on_attach = on_attach,
+                capabilities = capabilities,
+                filetypes = { "templ", "astro", "javascript", "typescript", "react", "heex", "elixir" },
+                -- init_options = { userLanguages = { templ = "html", heex = "html" } },
+                settings = {
+                    tailwindCSS = {
+                        includeLanguages = {
+                            elixir = "html-eex",
+                            eelixir = "html-eex",
+                            heex = "html-eex",
+                        },
                     },
                 },
-            },
-        })
-    end,
-    ["templ"] = function() -- default handler (optional)
-        vim.filetype.add({ extension = { templ = "templ" } })
-        require("lspconfig").templ.setup {
-            on_attach = on_attach,
-        }
-    end,
-    ["html"] = function()
-        require("lspconfig").html.setup {
-            on_attach = on_attach,
-            capabilities = capabilities,
-            filetypes = { "html" }
-        }
-    end,
-    ["ts_ls"] = function()
-        local lspconfig = require("lspconfig")
-        local mason_registry = require("mason-registry")
+            })
+        end,
+        ["templ"] = function() -- default handler (optional)
+            vim.filetype.add({ extension = { templ = "templ" } })
+            require("lspconfig").templ.setup {
+                on_attach = on_attach,
+            }
+        end,
+        ["html"] = function()
+            require("lspconfig").html.setup {
+                on_attach = on_attach,
+                capabilities = capabilities,
+                filetypes = { "html" }
+            }
+        end,
+        ["ts_ls"] = function()
+            local lspconfig = require("lspconfig")
+            local mason_registry = require("mason-registry")
 
-        local mason_install_path = mason_registry.get_package("vue-language-server"):get_install_path()
-        local vue_language_server_path = mason_install_path .. "/node_modules/@vue/language-server"
+            local mason_install_path = mason_registry.get_package("vue-language-server"):get_install_path()
+            local vue_language_server_path = mason_install_path .. "/node_modules/@vue/language-server"
 
-        lspconfig.ts_ls.setup({
-            init_options = {
-                plugins = {
-                    {
-                        name = "@vue/typescript-plugin",
-                        location = vue_language_server_path,
-                        languages = { "vue" },
+            lspconfig.ts_ls.setup({
+                init_options = {
+                    plugins = {
+                        {
+                            name = "@vue/typescript-plugin",
+                            location = vue_language_server_path,
+                            languages = { "vue" },
+                        },
                     },
                 },
-            },
-            filetypes = {
-                "javascript",
-                "typescript",
-                "vue",
-            },
-            on_attach = on_attach,
-            capabilities = capabilities,
-            commands = {
-                -- OrganizeImports = {
-                --     organize_imports,
-                --     description = "Organize Imports",
-                -- },
-            },
-        })
-    end
-}
+                filetypes = {
+                    "javascript",
+                    "typescript",
+                    "vue",
+                },
+                on_attach = on_attach,
+                capabilities = capabilities,
+                commands = {
+                    -- OrganizeImports = {
+                    --     organize_imports,
+                    --     description = "Organize Imports",
+                    -- },
+                },
+            })
+        end
+    }
+end
 
-mason_lspconfig.setup {
-    ensure_installed = {
-        "elixirls",
-        "gopls",
-        "html",
-        "lua_ls",
-        "pyright",
-        "tailwindcss",
-        "templ",
-        "ts_ls",
-        "volar",
-        -- "r_language_server"
+local config = function()
+    require('neodev').setup()
+
+    local capabilities = vim.lsp.protocol.make_client_capabilities()
+    capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+
+    local mason_lspconfig = require 'mason-lspconfig'
+    mason_lspconfig.setup {
+        ensure_installed = {
+            "elixirls",
+            "gopls",
+            "html",
+            "lua_ls",
+            "pyright",
+            "tailwindcss",
+            "templ",
+            "ts_ls",
+            "volar",
+            -- "r_language_server"
+        },
+        handlers = setup_handlers(capabilities, on_attach_fn),
+        automatic_installation = {}
+    }
+end
+
+return {
+    'neovim/nvim-lspconfig',
+    dependencies = {
+        { 'williamboman/mason.nvim', config = true },
+        'williamboman/mason-lspconfig.nvim',
+        { 'j-hui/fidget.nvim',       tag = 'legacy', opts = {} },
+        'folke/neodev.nvim',
     },
-    handlers = handlers,
-    automatic_installation = {}
+    config = config
 }

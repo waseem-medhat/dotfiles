@@ -1,3 +1,6 @@
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ','
+
 vim.o.hlsearch = false
 vim.o.scrolloff = 0
 vim.o.expandtab = true
@@ -32,7 +35,6 @@ vim.opt.clipboard = 'unnamed'
 -- }
 
 
--- Enable break indent
 vim.o.breakindent = true
 
 -- Save undo history

@@ -7,12 +7,12 @@ end
 
 -- config.window_decorations = "NONE"
 -- config.default_prog = { 'tmux' }
-config.color_scheme = 'Tokyo Night'
+config.color_scheme = 'Kanagawa (Gogh)'
 config.enable_tab_bar = false
-config.font = wezterm.font('Hack Nerd Font Mono')
+config.font = wezterm.font('JetBrainsMonoNL Nerd Font Mono')
 config.font_size = 13
-config.cell_width = 1.0
-config.line_height = 1.2
+-- config.cell_width = 1.0
+-- config.line_height = 1.1
 config.keys = {
     {
         key = 'F11',
@@ -25,6 +25,5 @@ config.window_padding = {
     top = 4,
     bottom = 0,
 }
-
 
 return config
