@@ -8,6 +8,7 @@
 . "$HOME/.asdf/completions/asdf.bash"
 export ASDF_GOLANG_MOD_VERSION_ENABLED=true
 
+export EDITOR='~/Downloads/software/nvim.appimage'
 export PYENV_ROOT='~/.pyenv/'
 export FLYCTL_INSTALL="/home/waseem/.fly"
 

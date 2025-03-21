@@ -144,6 +144,7 @@ local config = function()
             "pyright",
             "tailwindcss",
             "templ",
+            "terraformls",
             "ts_ls",
             "volar",
             -- "r_language_server"

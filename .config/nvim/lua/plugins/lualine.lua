@@ -2,7 +2,7 @@ local opts = {
     options = {
         disabled_filetypes = { 'NvimTree' },
         icons_enabled = true,
-        theme = 'auto',
+        theme = 'horizon',
         component_separators = { left = '', right = '' },
         section_separators = { left = '', right = '' },
         -- section_separators = { left = '', right = '' },
